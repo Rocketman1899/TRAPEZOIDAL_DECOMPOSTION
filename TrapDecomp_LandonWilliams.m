@@ -362,27 +362,6 @@ function [] = animatedRobot(RobotPath)  %Input Path Vector Data as a 2 column ar
 RobotPathx = (RobotPath(:,1));
 RobotPathy = (RobotPath(:,2));
 
-% filename = 'MyRobotAnim.gif' % Change File name if you need to 
-% 
-% h = animatedline;
-% for f = 1:length(RobotPathx)
-%     
-%    
-%     
-%  plot(RobotPathx(f),RobotPathy(f),'.k','MarkerSize',10)
-%     
-%     robotani = getframe;
-%     im = frame2im(robotani);
-%       [imind,cm] = rgb2ind(im,256);
-%     if f == 1;
-%           imwrite(imind,cm,filename,'gif', 'Loopcount',inf);
-%       else
-%           imwrite(imind,cm,filename,'gif','WriteMode','append','DelayTime',.000000001);
-%     end
-%       
-% end
-% movie(robotani)
-% end 
 g = plot(RobotPathx(1), RobotPathy(1), 'o', 'MarkerSize' ,8, 'MarkerFaceColor', 'k');
 filename = 'PortGIF4.gif'
 for f = 1:length(RobotPathx);
